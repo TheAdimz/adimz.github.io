@@ -1,0 +1,268 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --background: #184E35;
+    --light_text: #4CBFB2;
+    --dark_text: #0B271A;
+    --progress: #519FC0;
+    --progress-background: #236A62;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+    font-family: 'Merriweather', serif;
+}
+
+.site {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto, 5fr;
+    grid-template-areas:
+        "nav"
+        "title"
+        "main"
+        "side"
+        "footer";
+}
+
+.hdr {
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: var(--background);
+}
+    .logo {
+        cursor: pointer;
+        margin-right: auto;
+        background-color: var(--background);
+    }
+    .nav-links {
+        list-style: none;
+        background-color: var(--background);
+    }
+        .nav-links li {
+            display: inline-block;
+            padding: 0 20px;
+            margin-right: 25px;
+            background-color: var(--background);
+        }
+            .nav-links li a {
+                transition: all .3s ease 0s;
+                color: blue;
+                background-color: var(--background);
+            }
+            .nav-links li a:hover {
+                color: aqua;
+            }
+.title {
+    grid-area: title;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.main-content {
+    grid-area: main;
+    margin: 5px;
+    padding: 2px;
+}
+    .main-content h1 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .main-content h2 {
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .profile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.255);
+    }
+        .profile .image-box {
+            position: relative;
+            width: auto;
+            height: auto;
+            border-radius: 25%;
+            overflow: hidden;
+        }
+        .profile h2 {
+            color: var(--light_text);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+            .profile h2 span {
+                font-size: .8em;
+                font-weight: 400;
+            }
+    .main-title {
+        color: var(--light_text);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .contact-info {
+        position: relative;
+    }
+        .contact-info li {
+            position: relative;
+            list-style: none;
+            margin: 2px;
+            cursor: pointer;
+            color: var(--dark_text);
+        }
+            .contact-info li i {
+                display: inline-block;
+                width: 1em;
+                font-size: 1em;
+                color: var(--light_text);
+            }
+    .education-info {
+        position: relative;
+    }
+        .education-info h5 {
+            color: var(--light_text);
+            font-weight: 700;
+        }
+        .degree {
+            color: var(--dark_text);
+            font-weight: 700;
+        }
+        .institution {
+            color: var(--dark_text);
+            font-weight: 400;
+        }
+            .institution a {
+                transition: all .3s ease 0s;
+                color: var(--dark_text);
+                font-weight: 400;
+            }
+            .institution a:hover {
+                color: aqua;
+            }
+    .progression-info {
+        position: relative;
+    }
+        .progression-info li {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        .progression-info h5 {
+            color: var(--dark_text);
+            font-size: 1em;
+            font-weight: 400;
+        }
+        .progression-info .percent {
+            position: relative;
+            height: 7px;
+            display: block;
+            color: aqua;
+        }
+        .progression-info progress::-webkit-progress-value {
+            background-color: var(--progress);
+        }
+        .progression-info progress::-webkit-progress-bar {
+            background-color: var(--progress-background);
+        }
+
+.side-content {
+    grid-area: side;
+}
+    .side-content .side-title {
+        color: var(--dark_text);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .side-content .about {
+        text-indent: 30px;
+    }
+    .side-content ul {
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+    }
+        .side-content ul li {
+            list-style: none;
+        }
+    .experience-box {
+        display: flex;
+        flex-direction: row;
+        margin: 10px, 0;
+    }
+        .experience-box .years-employer {
+            min-width: 150px;
+        }
+            .experience-box .years-employer h5 {
+                text-transform: uppercase;
+                color: var(--dark_text);
+                font-weight: 700;
+            }
+        .experience-box .work-details h4 {
+            text-transform: uppercase;
+            color: var(--dark_text);
+            font-size: 1.2em;
+        }
+.ftr {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+}
+    .socials {
+        list-style: none;
+        background-color: var(--background);
+    }
+        .socials li {
+            display: inline-block;
+            padding: 0 20px;
+            margin: 5px;
+            background-color: var(--background);
+        }
+            .socials li i {
+                background-color: var(--background);
+            }
+            .socials li a {
+                transition: all .3s ease 0s;
+                color: blue;
+                background-color: var(--background);
+            }
+            .socials li a:hover {
+                color: aqua;
+            }
+    .top {
+        transition: all .3s ease 0s;
+        background-color: var(--background);
+    }
+    .top:hover {
+        color: aqua;
+    }
+
+    @media screen and (min-width: 40em) {
+        .site {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr), minmax(0, 2fr);
+            grid-template-rows: auto, 4fr;
+            grid-template-areas:
+                "nav nav"
+                "main title"
+                "main side"
+                "footer footer"
+        }
+    }
