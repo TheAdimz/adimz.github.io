@@ -6,6 +6,8 @@
     --dark_text: #0B271A;
     --progress: #519FC0;
     --progress-background: #236A62;
+    --div-odd: #50CA93;
+    --div-even: 399D6F;
 }
 
 * {
@@ -177,6 +179,43 @@
             background-color: var(--progress-background);
         }
 
+    .main-content .form {
+        position: relative;
+        margin: 20px;
+        padding: 20px;
+        color: var(--dark_text);
+        background: var(--light_text);
+    }
+        .main-content .form h1 {
+            color: var(--dark_text);
+            background: var(--light_text);
+        }
+        .main-content .form-input {
+            position: relative;
+            margin: 20px;
+            padding: 20px;
+            color: var(--dark_text);
+            background: var(--light_text);
+        }
+    .even {
+        color: var(--div-even);
+    }
+        .even a {
+            color: var(--div-even);
+        }
+        .even a:hover {
+            color: aqua;
+        }
+    .odd {
+        color: var(--div-odd);
+    }
+        .odd a {
+            color: var(--div-odd);
+        }
+        .odd a:hover {
+            color: aqua;
+        }
+
 .side-content {
     grid-area: side;
 }
@@ -198,6 +237,7 @@
         .side-content ul li {
             list-style: none;
         }
+
     .experience-box {
         display: flex;
         flex-direction: row;
@@ -252,8 +292,8 @@
         color: aqua;
     }
 
-    @media screen and (min-width: 40em) {
-        .site {
+@media screen and (min-width: 40em) {
+    .site {
             position: relative;
             width: 100%;
             display: grid;
@@ -264,5 +304,5 @@
                 "main title"
                 "main side"
                 "footer footer"
-        }
     }
+}
